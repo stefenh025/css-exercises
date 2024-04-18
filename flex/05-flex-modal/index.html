@@ -10,11 +10,26 @@
   <body>
     <div class="modal">
       <div class="icon">!</div>
-      <div class="header">Are you sure you want to do that?</div>
-      <button class="close-button">✖</button>
-      <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur excepturi id soluta, numquam minima rerum doloremque eveniet aspernatur beatae commodi. Cupiditate recusandae ad repellendus quidem consectetur sequi amet aspernatur cumque!</div>
-      <button class="continue">Continue</button>
-      <button class="cancel">Cancel</button>
+      <div class="content">
+        <div class="header">
+          <div>Are you sure you want to do that?</div>
+          <button class="close-button">✖</button>
+        </div>
+        <!-- The solution lacks additional divs below and leaves the button as is which are
+        an inline-block, allowing it to sit next to each element. We have the content
+        class in our solution as display:flex which causes the buttons below to grow.
+        The solution lacks the content class css and the header is still applied only
+        to the text in the header, allowing the buttons to stay as an block and not
+        expanding needlessly. Since we are using content class as a flex display, the 
+        buttons need an additional div to keep them from growing. -->
+        <div>
+          <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur excepturi id soluta, numquam minima rerum doloremque eveniet aspernatur beatae commodi. Cupiditate recusandae ad repellendus quidem consectetur sequi amet aspernatur cumque!</div>
+        </div>
+        <div>
+          <button class="continue">Continue</button>
+          <button class="cancel">Cancel</button>
+        </div>
+      </div>
     </div>
   </body>
 </html>
